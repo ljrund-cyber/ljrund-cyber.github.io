@@ -374,6 +374,101 @@ main h3 {
   text-underline-offset: 0.18em;
 }
 
+.contact-layout {
+  padding-top: 6px;
+}
+
+.contact-top {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.32fr);
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 44px;
+}
+
+.contact-intro p {
+  height: 100%;
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  font-size: 1rem;
+  line-height: 1.75;
+  background-color: rgba(216, 199, 197, 0.72);
+  border-radius: 24px;
+  padding: 22px 24px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 2px;
+}
+
+.contact-details a {
+  color: var(--text-dark);
+  font-size: 1.22rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.contact-card {
+  margin-bottom: 24px;
+}
+
+.contact-card-frame {
+  background: var(--berry-dark);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 12px 26px rgba(89, 52, 60, 0.12);
+}
+
+.contact-card-frame img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.contact-icon,
+.contact-badge {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--berry);
+  color: #ffffff;
+  border: 2px solid var(--berry);
+  border-radius: 7px;
+  flex: 0 0 40px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-icon {
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.contact-badge {
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.contact-details a:hover .contact-icon,
+.contact-details a:hover .contact-badge {
+  background-color: #9d3248;
+  transform: translateY(-1px);
+}
+
 /* Footer */
 .footer {
   background-color: #a04253;
@@ -542,6 +637,24 @@ main h3 {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
+  .contact-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .contact-details {
+    align-items: flex-start;
+  }
+
+  .contact-details a {
+    justify-content: flex-start;
+  }
+
+  .contact-card-frame {
+    padding: 24px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -659,6 +772,15 @@ main h3 {
   .about-resume-card a,
   .work-item a {
     font-size: 1.3rem;
+  }
+
+  .contact-intro p,
+  .contact-details a {
+    font-size: 0.95rem;
+  }
+
+  .contact-card-frame {
+    padding: 18px 18px 22px;
   }
 
   .footer-inner {
