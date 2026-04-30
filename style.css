@@ -53,7 +53,7 @@ body {
 }
 
 .logo img {
-  width: 122px;
+  width: 138px;
   height: auto;
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 .logo-tagline {
-  font-size: clamp(1.25rem, 2.8vw, 1.7rem);
+  font-size: clamp(1.45rem, 3.2vw, 1.95rem);
   font-style: italic;
   color: #fff7f7;
 }
@@ -141,23 +141,35 @@ body {
 }
 
 .hero-copy h1 {
-  font-size: clamp(1.75rem, 3.8vw, 2.95rem);
+  font-size: clamp(1.05rem, 2.2vw, 1.7rem);
   line-height: 1.08;
   margin-bottom: 14px;
 }
 
 .hero-summary {
   max-width: 42ch;
-  font-size: 0.98rem;
+  font-size: 0.72rem;
   color: rgba(255, 255, 255, 0.98);
 }
 
 /* Layout */
 .container {
   max-width: 1120px;
-  margin: 52px auto 60px;
+  margin: 16px auto 60px;
   padding: 0 24px;
   text-align: left;
+}
+
+main h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+
+main h3 {
+  font-size: 30px;
+  color: var(--berry-dark);
+  margin-bottom: 20px;
 }
 
 /* Intro Section */
@@ -173,12 +185,6 @@ body {
   text-align: left;
 }
 
-.intro-text h3 {
-  font-size: 28px;
-  color: var(--berry);
-  margin-bottom: 20px;
-}
-
 .intro-text p {
   margin-bottom: 18px;
   font-size: 18px;
@@ -188,7 +194,7 @@ body {
   width: 100%;
   max-width: none;
   display: block;
-  border: 10px solid var(--berry-dark);
+  border: 10px solid var(--berry);
   border-radius: 28px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
 }
@@ -200,12 +206,6 @@ body {
   text-align: left;
   width: 100%;
   max-width: 100%;
-}
-
-.intro-wide h3 {
-  font-size: 28px;
-  color: var(--berry);
-  margin-bottom: 20px;
 }
 
 .intro-wide p {
@@ -221,8 +221,6 @@ body {
 
 .work h2 {
   margin-bottom: 40px;
-  font-size: 30px;
-  color: var(--berry);
 }
 
 .work-grid {
@@ -239,18 +237,141 @@ body {
 
 .work-item p {
   margin-top: 12px;
-  font-size: 22px;
-  font-weight: 600;
 }
 
 .work-item a {
-  color: var(--berry-dark);
+  color: var(--text-dark);
+  font-size: 1.75rem;
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
 
 .work-item a:hover {
   color: #a04253;
+}
+
+.about-layout {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.about-story {
+  max-width: none;
+  margin: 0 auto 36px;
+  text-align: left;
+  background-color: rgba(216, 199, 197, 0.72);
+  border-radius: 24px;
+  padding: 24px 26px;
+}
+
+.about-story p {
+  margin-bottom: 16px;
+  font-size: 0.98rem;
+}
+
+.about-collage {
+  margin-bottom: 42px;
+}
+
+.about-collage img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+  min-height: 420px;
+}
+
+.about-experience {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
+  gap: 34px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.about-experience-copy p {
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 24px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  align-items: start;
+  border-bottom: 1px solid rgba(43, 43, 43, 0.12);
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.experience-role {
+  grid-column: 1;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1px;
+}
+
+.experience-company {
+  grid-column: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--berry-dark);
+  margin-bottom: 1px;
+  white-space: nowrap;
+}
+
+.experience-meta {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: right;
+  white-space: nowrap;
+  align-self: end;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: rgba(43, 43, 43, 0.75);
+  margin-bottom: 0;
+}
+
+.experience-list {
+  padding-left: 20px;
+}
+
+.experience-list li {
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+}
+
+.about-resume-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  align-self: start;
+}
+
+.about-resume-card img {
+  width: 100%;
+  max-width: 440px;
+  display: block;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+
+.about-resume-card a {
+  color: var(--text-dark);
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 /* Footer */
@@ -373,11 +494,11 @@ body {
   }
 
   .logo-tagline {
-    font-size: 1.45rem;
+    font-size: 1.6rem;
   }
 
   .logo img {
-    width: 108px;
+    width: 120px;
   }
 
   .intro-wide {
@@ -386,8 +507,7 @@ body {
     text-align: left;
   }
 
-  .intro-text h3,
-  .intro-wide h3 {
+  main h3 {
     font-size: 1.5rem;
   }
 
@@ -403,6 +523,24 @@ body {
 
   .footer-title {
     font-size: 1.7rem;
+  }
+
+  .about-layout {
+    padding-top: 24px;
+  }
+
+  .about-story {
+    text-align: left;
+    margin-bottom: 28px;
+  }
+
+  .about-collage img {
+    min-height: 320px;
+  }
+
+  .about-experience {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 
@@ -426,7 +564,7 @@ body {
   }
 
   .logo img {
-    width: 98px;
+    width: 108px;
   }
 
   .home-header .hero-banner {
@@ -453,12 +591,12 @@ body {
   }
 
   .hero-copy h1 {
-    font-size: 1.6rem;
+    font-size: 1.05rem;
     line-height: 1.12;
   }
 
   .hero-summary {
-    font-size: 0.9rem;
+    font-size: 0.68rem;
   }
 
   .intro-wide {
@@ -471,8 +609,56 @@ body {
     border-radius: 22px;
   }
 
-  .work h2 {
-    font-size: 26px;
+  main h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-layout {
+    padding-top: 20px;
+  }
+
+  .about-story p,
+  .about-experience-copy p,
+  .experience-list li {
+    font-size: 0.95rem;
+  }
+
+  .about-collage {
+    margin-bottom: 30px;
+  }
+
+  .about-collage img {
+    min-height: 240px;
+    border-radius: 16px;
+  }
+
+  .about-resume-card img {
+    border-radius: 16px;
+  }
+
+  .experience-role {
+    font-size: 1.15rem;
+  }
+
+  .experience-company {
+    font-size: 1.05rem;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    row-gap: 2px;
+  }
+
+  .experience-meta {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .about-resume-card a,
+  .work-item a {
+    font-size: 1.3rem;
   }
 
   .footer-inner {
