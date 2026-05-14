@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Social Media | Alayna Rund</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alayna Rund social media portfolio, digital marketing, and content strategy work">
+  <meta property="og:image" content="images/Designer-4.png">
+  <link rel="icon" href="images/favicon (1).ico" type="image/x-icon">
+</head>
+<body class="social-page">
+
+<main class="insta-app" aria-label="Social media portfolio">
+  <header class="insta-topbar">
+    <nav class="insta-nav" aria-label="Social page navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="insta-profile" aria-label="Profile summary">
+    <img class="insta-avatar" src="images/Designer-4.png" alt="Alayna Rund cherry logo">
+
+    <div class="insta-profile-main">
+      <div class="insta-name-row">
+        <h1>Alayna Rund | Social Media</h1>
+      </div>
+
+      <dl class="insta-stats">
+        <div>
+          <dt>9</dt>
+          <dd>posts</dd>
+        </div>
+        <div>
+          <dt>20</dt>
+          <dd>followers</dd>
+        </div>
+        <div>
+          <dt>26</dt>
+          <dd>posts</dd>
+        </div>
+      </dl>
+
+      <p class="insta-bio">
+        Digital Marketing & Social Media Professional.
+      </p>
+    </div>
+  </section>
+
+  <section class="insta-grid" aria-label="Social media case studies">
+    <button class="insta-post post-draft" type="button" data-case="0" aria-label="Open Campaign Strategy case study">
+      <img src="images/quare-2.webp" alt="MWMO Client Project preview">
+      <span>MWMO Client Project</span>
+    </button>
+    <button class="insta-post post-draft" type="button" data-case="1" aria-label="Open Content Planning case study">
+      <img src="images/Social Post- 2.webp" alt="Johnny Pops Event">
+      <span>Johnny Pops Event</span>
+    </button>
+    <button class="insta-post post-draft" type="button" data-case="2" aria-label="Open Storytelling case study">
+      <img src="images/A-9.webp" alt="Storytelling preview">
+      <span>Storytelling</span>
+    </button>
+    <button class="insta-post post-draft" type="button" data-case="4" aria-label="Open Digital Design case study">
+      <img src="images/A-7.webp" alt="Digital Design preview">
+      <span>Digital Design</span>
+    </button>
+    <button class="insta-post post-draft" type="button" data-case="3" aria-label="Open Visual Identity case study">
+      <img src="images/HALLOWEEN-2.webp" alt="UST Halloween Post">
+      <span>UST Halloween Post</span>
+    </button>
+    <button class="insta-post post-draft" type="button" data-case="5" aria-label="Open Photography case study">
+      <img src="images/Tezza-6113.webp" alt="Photography preview">
+      <span>Photography</span>
+    </button>
+    <button class="insta-post post-draft" type="button" data-case="7" aria-label="Open Community Growth case study">
+      <img src="images/IMG_5795.webp" alt="DIning Services March Madness">
+      <span>Dining Services March Madness</span>
+    </button>
+    <button class="insta-post post-draft" type="button" data-case="6" aria-label="Open Analytics Report case study">
+      <img src="images/2.webp" alt="Analytics Report preview">
+      <span>Analytics Report</span>
+    </button>
+
+    <button class="insta-post post-draft" type="button" data-case="8" aria-label="Open Paid Social case study">
+      <img src="images/Black and White Classic Vintage Minimalist Newspaper Finance Report Presentation-4.webp" alt="Paid Social preview">
+      <span>Paid Social</span>
+    </button>
+  </section>
+
+  <footer class="social-sketch-footer">
+    <div>
+      <p>Let’s Collab!</p>
+      <a href="mailto:ljrund@gmail.com">ljrund@gmail.com</a>
+    </div>
+
+    <div>
+      <span>alaynarund 2026</span>
+    </div>
+  </footer>
+</main>
+
+<div class="case-modal" id="caseModal" aria-hidden="true">
+  <div class="case-overlay" data-close="true"></div>
+  <article class="case-card" role="dialog" aria-modal="true" aria-labelledby="caseTitle">
+    <header class="case-header">
+      <button class="case-close" type="button" aria-label="Close case study">×</button>
+      <div>
+        <p class="case-kicker" id="caseKicker">Case Study</p>
+        <h2 id="caseTitle"></h2>
+      </div>
+    </header>
+
+    <div class="case-scroll">
+      <div class="case-copy">
+        <p id="caseBody"></p>
+      </div>
+    </div>
+
+    <footer class="case-actions">
+      <button class="case-prev" type="button">Previous</button>
+      <p id="caseCount"></p>
+      <button class="case-next" type="button">Next</button>
+    </footer>
+  </article>
+</div>
+
+<script>
+  const caseStudies = [
+    {
+      title: "MWMO Client Project",
+      body: "For the Mississippi Watershed Management Organization client project, the primary objective was to design easy-to-use, pre-made social media newsletter templates that aligned with strict brand guidelines. The client emphasized a hyper-minimalist aesthetic, prioritizing bold colors, high readability, and accessibility through limited text and minimal visual clutter.A key challenge involved navigating an evolving creative direction. While the client encouraged adherence to minimal design examples, they also requested originality, creating tension between innovation and constraint. The final templates balanced clarity, accessibility, and brand consistency. This case highlights the importance of flexibility, strong communication, and aligning design strategy with both client expectations and effective digital content practices."
+    },
+    {
+      title: "Johnny Pops Event",
+      body: "I designed this social media post for Johnny Pops, an organic popsicle company based in Plymouth, Minnesota, to promote their family-friendly event, Pops in the Park. The design showcases a playful park scene featuring a family enjoying time together, reinforcing the welcoming, community-focused feel of the event. Johnny Pops’ brand is bright, colorful, and fun, so I reflected that energy while keeping the layout clean and easy to read. The event includes live music, games, and of course Johnny Pops, making it important to appeal to both kids and parents.I incorporated a popsicle illustration into the park setting, with key details like the date and time placed inside the popsicle itself to keep the design both functional and visually engaging. Overall, the post balances fun, clarity, and strong brand consistency."
+    },
+    {
+      title: "Brand Storytelling",
+      body: "This case study explores how social media can be used to tell a brand story in small, repeatable moments. Instead of relying only on announcements or promotional content, the strategy focuses on showing personality, values, and everyday details that help audiences understand the brand more fully. The storytelling direction is built around recurring themes, such as community, process, service, experience, or behind-the-scenes context. Each post is designed to contribute to a larger narrative while still working on its own in the feed. Captions are used to add meaning, explain the moment, and connect the visual content back to the brand’s voice. This approach helps the social presence feel more human and less transactional. Over time, the content becomes easier to recognize, easier to connect with, and more effective at building trust with the audience."
+    },
+    {
+      title: "UST Halloween Post",
+      body: "I created a social media post for UST Dining Services to celebrate Halloween, featuring the university’s mascot, Tommie, styled with playful seasonal elements. For this design, I dressed Tommie in a witch’s hat and added a trick‑or‑treating basket to reinforce the Halloween theme in a fun, approachable way. I chose a drippy typeface to introduce a light “horror” feel while keeping the overall tone friendly and school‑appropriate. The post was designed to be eye‑catching and adaptable, and it ultimately evolved into a reusable template for other holidays throughout the year. This system has since been applied to virtually eceryother holiday such as Christmas, Earth Day, and Valentine’s Day. Only a few elements change each time, including the holiday‑specific font, the hat or accessory Tommie wears, and the side element, such as a Christmas tree or a box of chocolates. This approach ensured brand consistency while allowing for seasonal creativity."
+    },
+   
+     {
+      title: "Photography",
+      body: "This case study focuses on the role of photography in creating a stronger and more authentic social media presence. Original photography gives a brand visual material that feels specific instead of generic, helping content feel more grounded and personal. The process includes identifying the mood of the brand, capturing images that support that mood, and editing the photos so they work consistently within the feed. Photography can be used as the main focus of a post, as supporting texture behind graphics, or as a way to show people, places, details, and experiences connected to the brand. Strong photo direction helps add variety while still supporting the overall visual identity. When used intentionally, photography makes digital content feel warmer, more human, and more connected to the real environment behind the brand."
+    },
+ {
+      title: "UST Halloween Post",
+      body: ""
+    },
+    {
+      title: "Dining Services March Madness",
+      body: "This case study highlights a community-focused approach to social media growth. Rather than measuring success only through follower count, the strategy focuses on meaningful interaction and relationship-building. Community growth begins with understanding what the audience cares about, what questions they may have, and what kinds of content encourage them to respond. The plan includes comment prompts, story engagement, partner or campus/community touchpoints, and a consistent response rhythm after posts go live. This helps the account feel active and approachable instead of one-directional. Strong community management also supports trust because audiences are more likely to engage when they feel seen and included. The result is a social media presence that grows through connection, not just frequency. This approach helps turn passive viewers into more active participants in the brand’s digital space."
+    },
+    {
+      title: "Analytics Report",
+      body: "This case study focuses on using analytics to understand how social media content is performing and how future content can improve. The reporting process looks at more than surface-level numbers by connecting metrics to creative decisions, audience behavior, and communication goals. Engagement, reach, saves, shares, comments, and post format are reviewed to identify patterns across the feed. This helps show which types of content are gaining attention, which messages are encouraging interaction, and where the strategy may need to shift. Analytics are most useful when they lead to clear recommendations, so the report turns data into practical next steps for content planning and design. The goal is not just to measure performance, but to make smarter creative choices. This approach helps social media strategy become more intentional, responsive, and grounded in evidence."
+    },
+    
+    {
+      title: "Paid Social",
+      body: "This case study focuses on developing paid social content that feels clear, strategic, and native to the platform. Effective paid content needs to support a specific campaign goal while still fitting naturally into the audience’s feed. The process begins with defining the target audience, the desired action, and the message that will be most relevant to that group. Creative variations are then built around different visual hooks, caption styles, and calls to action. The design should be strong enough to catch attention quickly, but simple enough to communicate the message without confusion. Paid social also benefits from testing, since small changes in copy, image, or audience targeting can affect performance. The final concept creates a stronger connection between brand awareness and measurable action while keeping the creative aligned with the broader social media presence."
+    }
+  ];
+
+  const modal = document.getElementById("caseModal");
+  const title = document.getElementById("caseTitle");
+  const body = document.getElementById("caseBody");
+  const count = document.getElementById("caseCount");
+  let activeCase = 0;
+
+  function renderCase(index) {
+    activeCase = (index + caseStudies.length) % caseStudies.length;
+    const item = caseStudies[activeCase];
+    title.textContent = item.title;
+    body.textContent = item.body;
+    count.textContent = `${activeCase + 1} / ${caseStudies.length}`;
+  }
+
+  function openCase(index) {
+    renderCase(index);
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeCase() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  document.querySelectorAll(".insta-post").forEach((post) => {
+    post.addEventListener("click", () => openCase(Number(post.dataset.case)));
+  });
+
+  document.querySelector(".case-close").addEventListener("click", closeCase);
+  document.querySelector(".case-overlay").addEventListener("click", closeCase);
+  document.querySelector(".case-prev").addEventListener("click", () => renderCase(activeCase - 1));
+  document.querySelector(".case-next").addEventListener("click", () => renderCase(activeCase + 1));
+
+  document.addEventListener("keydown", (event) => {
+    if (!modal.classList.contains("is-open")) return;
+    if (event.key === "Escape") closeCase();
+    if (event.key === "ArrowLeft") renderCase(activeCase - 1);
+    if (event.key === "ArrowRight") renderCase(activeCase + 1);
+  });
+</script>
+
+</body>
+</html>
