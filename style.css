@@ -681,39 +681,6 @@ main h3 {
   opacity: 0;
 }
 
-.social-sketch-footer {
-  min-height: 112px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 28px 36px;
-  background: #a04253;
-  color: #ffffff;
-}
-
-.social-sketch-footer p {
-  margin-bottom: 14px;
-  font-size: 1.35rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.social-sketch-footer a,
-.social-sketch-footer span {
-  color: #ffffff;
-  font-size: 0.86rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.social-sketch-footer > div:last-child {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0;
-}
-
 .case-modal {
   position: fixed;
   inset: 0;
@@ -1078,10 +1045,6 @@ main h3 {
     margin: 0 36px 56px;
   }
 
-  .social-sketch-footer {
-    padding: 24px 28px;
-  }
-
   .case-card {
     inset: 22px;
     width: calc(100% - 24px);
@@ -1344,21 +1307,6 @@ main h3 {
 
   .insta-post::after {
     opacity: 0;
-  }
-
-  .social-sketch-footer {
-    min-height: 74px;
-    padding: 16px 12px;
-  }
-
-  .social-sketch-footer p {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-  }
-
-  .social-sketch-footer a,
-  .social-sketch-footer span {
-    font-size: 0.66rem;
   }
 
   .case-card {
