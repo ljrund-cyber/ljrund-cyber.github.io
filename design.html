@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Graphic Design | Alayna Rund</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alayna Rund graphic design portfolio, branding, digital signage, logos, invitations, and web layout work">
+  <meta property="og:image" content="images/Logos.webp">
+  <link rel="icon" href="images/favicon (1).ico" type="image/x-icon">
+</head>
+<body class="design-page">
+
+<!-- Header / Navigation -->
+<header class="header">
+  <div class="inner">
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/Designer-4.png" alt="Cherry Logo">
+        <div class="logo-text">
+          <span class="logo-name">Alayna Rund</span>
+          <span class="logo-tagline">Digital + Social Media</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#my-work">My Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container design-layout">
+  <section class="about-story design-intro">
+    <h3>Graphic Design</h3>
+    <p>
+      A collection of brand identities, event pieces, digital signage, logos, and layout work.
+      Select a piece to view the full image and case study.
+    </p>
+  </section>
+
+  <section class="design-gallery" aria-label="Graphic design portfolio pieces">
+    <div class="design-row design-row-top">
+      <div class="design-stack">
+        <button class="design-tile" type="button" data-design="6" aria-label="Open Website Layout case study">
+          <img src="images/Screenshot 2026-05-16 at 3.39.25 PM.webp" alt="Cycling website layout">
+          <span>Website Layout</span>
+        </button>
+
+        <button class="design-tile" type="button" data-design="1" aria-label="Open Johnny Pops case study">
+          <img src="images/JonnyPops.webp" alt="Johnny Pops flyer">
+          <span>Johnny Pops</span>
+        </button>
+      </div>
+
+      <div class="design-stack">
+        <button class="design-tile" type="button" data-design="8" aria-label="Open Shower Invite case study">
+          <img src="images/Whimsical Orange Birthday Party Invitation.webp" alt="Pumpkin baby shower invitation">
+          <span>Shower Invite</span>
+        </button>
+
+        <button class="design-tile tile-logo" type="button" data-design="7" aria-label="Open Games and Puzzles Shelf Logo case study">
+          <img src="images/Logos.webp" alt="Games and Puzzles Shelf logo">
+          <span>Games & Puzzles Shelf Logo</span>
+        </button>
+      </div>
+
+      <button class="design-tile" type="button" data-design="2" aria-label="Open Commuter Meal Plans case study">
+        <img src="images/Commuter meal plans on sale now!-3.webp" alt="Commuter meal plans digital signage">
+        <span>Commuter Meal Plans</span>
+      </button>
+
+      <button class="design-tile tile-wide" type="button" data-design="3" aria-label="Open ICON Meats case study">
+        <img src="images/Icon Meats - Tommie link-3.webp" alt="ICON Meats digital signage">
+        <span>ICON Meats</span>
+      </button>
+    </div>
+
+    <div class="design-row design-row-banner">
+      <button class="design-tile tile-banner" type="button" data-design="5" aria-label="Open Birthday Banner case study">
+        <img src="images/Legally-5.webp" alt="Birthday banner">
+        <span>Birthday Banner</span>
+      </button>
+
+      <button class="design-tile" type="button" data-design="0" aria-label="Open Weston Woodwork case study">
+        <img src="images/Screenshot 2026-05-16 at 3.41.38 PM.webp" alt="Weston Woodwork brand identity">
+        <span>Weston Woodwork</span>
+      </button>
+    </div>
+
+    <div class="design-row design-row-lower">
+      <div class="design-stack">
+        <button class="design-tile tile-logo" type="button" data-design="4" aria-label="Open Monogram Logo case study">
+          <img src="images/Screenshot 2026-05-16 at 3.28.24 PM.webp" alt="Monogram logo">
+          <span>Monogram Logo</span>
+        </button>
+
+        <div class="design-note">
+          <h4>Logo Work</h4>
+          <p>
+            Clean marks, event graphics, and layout systems built to feel memorable,
+            readable, and ready for real-world use.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-copy">
+      <p class="footer-title">Let’s Collab!</p>
+      <p class="footer-email"><a href="mailto:ljrund@gmail.com">ljrund@gmail.com</a></p>
+    </div>
+
+    <div class="footer-meta">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/alayna-rund-3666892bb" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+        <a href="https://substack.com/@alaynarund" target="_blank" rel="noreferrer" aria-label="Substack">S</a>
+      </div>
+      <p class="footer-note">alaynarund 2026</p>
+    </div>
+  </div>
+</footer>
+
+<div class="case-modal" id="designModal" aria-hidden="true">
+  <div class="case-overlay" data-close="true"></div>
+  <article class="case-card" role="dialog" aria-modal="true" aria-labelledby="designTitle">
+    <header class="case-header">
+      <button class="case-close" type="button" aria-label="Close case study">x</button>
+      <div>
+        <p class="case-kicker">Case Study</p>
+        <h2 id="designTitle"></h2>
+      </div>
+    </header>
+
+    <div class="case-scroll">
+      <figure class="case-media">
+        <img id="designImage" src="" alt="">
+      </figure>
+      <div class="case-copy">
+        <p id="designBody"></p>
+      </div>
+    </div>
+
+    <footer class="case-actions">
+      <button class="case-prev" type="button">Previous</button>
+      <p id="designCount"></p>
+      <button class="case-next" type="button">Next</button>
+    </footer>
+  </article>
+</div>
+
+<script>
+  const designStudies = [
+    {
+      title: "Weston Woodwork",
+      body: "I created a complete brand identity system for my dad's woodworking business with the goal of reflecting the craftsmanship, quality, and care behind the work while maintaining a clean, professional look. The project included the design of a custom logo along with a coordinated set of stationery, including a business card, letterhead, and envelope. The logo is built around the company's initials, merging the two W letterforms into a single, cohesive mark to create a strong and memorable visual identity. To connect the brand directly to woodworking, I incorporated a woodgrain texture into the design and enhanced it with a subtle gradient effect to add depth and a modern feel. The identity system was applied consistently across all materials to ensure a cohesive brand presence. The company currently uses this system in their day-to-day business, helping establish a more polished and recognizable brand."
+    },
+    {
+      title: "Johnny Pops",
+      body: "I designed a promotional flyer for Johnny Pops, an organic popsicle company based in Plymouth, Minnesota, to promote a family event called Pops in the Park. Johnny Pops' brand identity is bright, playful, and colorful, so the flyer was designed to reflect that fun energy while still emphasizing their focus on organic pops made with real fruit. The event included live music, games, and of course Johnny Pops, so it was important that the design appealed to both kids and parents while clearly communicating all the essential event details. I took the concept literally by illustrating a popsicle in a park setting, tying the imagery directly to the event name. My favorite element of the design is how the date and time are placed inside the popsicle itself, making the information both functional and visually engaging. The final flyer balances fun, clarity, and brand consistency."
+    },
+    {
+      title: "Commuter Meal Plans",
+      body: "I designed a digital signage post for UST Dining Services aimed at encouraging commuter students to purchase meal plans. The goal was to make the message feel approachable and appealing to a busy student audience, so I leaned into a bright, playful visual style that would stand out on screens across campus. I incorporated a car element to directly connect with commuter students and reinforce the idea of convenience and accessibility. This piece was especially meaningful to me because it was the first design I created for Dining Services that I got to see live on digital displays throughout the school. Seeing my work in a real-world setting, not just on my computer, was incredibly rewarding, and I still notice it on campus today. That experience helped solidify the impact of design beyond the process itself and showed how thoughtful, engaging visuals can connect with their audience in a tangible way."
+    },
+    {
+      title: "ICON Meats",
+      body: "I designed digital signage for Dining Services at the University of St. Thomas to promote an on-campus visit from ICON Meats, a jerky and beef stick company offering free samples to students. The goal of the post was to grab attention quickly, communicate the event details, and encourage students to stop by and participate. I focused on creating a bold, playful visual that would stand out as students walked by. One of my favorite elements is the shopping cart graphic with the ICON products inside, which helped reinforce the food-focused theme in a fun and unexpected way. I paired the imagery with a lively, expressive typeface to match the upbeat tone of the event and appeal to a student audience. The final design successfully balanced clarity, energy, and visual interest while aligning with campus dining branding. This sign was also very easily converted to social to further promote the event."
+    },
+    {
+      title: "Monogram Logo",
+      body: "I created a monogram logo as part of a graphic design class project, with the goal of combining my initials into a cohesive and visually striking mark. The design focuses on strong, simplified letterforms that interlock seamlessly, creating a sense of unity and flow. I explored how the shapes of each letter could interact, ultimately using curved connections and overlapping forms to guide the viewer's eye through the composition. The bold, monochromatic color scheme emphasizes the structure of the design, allowing the form itself to take priority without distraction. Rounded edges soften the overall look while maintaining a modern, confident feel. I paid close attention to negative space, ensuring that each letter remains legible even as they merge together. The result is a clean, versatile monogram that can function across a variety of applications, from personal branding to print and digital use, while still feeling distinctive and intentional."
+    },
+    {
+      title: "Birthday Banner",
+      body: "I designed a custom birthday banner to celebrate my friend's 21st birthday, with the goal of creating something bold, personal, and visually fun. The concept drew inspiration from playful, Legally Blonde-style aesthetics, using bright pink tones, bold typography, and celebratory elements to reflect the milestone and the personality of the event. I incorporated balloon-style numbers to emphasize turning 21, paired with a mix of structured and script fonts to create contrast and energy within the layout. Graphic elements like champagne glasses, stripes, and a stylized illustrated figure help reinforce a party atmosphere while adding visual interest across the composition. The neutral textured background balances the vibrant pinks, ensuring the design remains readable and cohesive. I also framed the banner with striped borders to give it a polished, finished feel. The final design successfully combines humor, personality, and clean composition, resulting in a memorable centerpiece for the celebration."
+    },
+    {
+      title: "Website Layout",
+      body: "This graphic design assignment focused on creating mockups for an informational cycling website that communicates the mission of a bicycling advocacy organization. The project required designing three responsive layouts, mobile, tablet, and desktop, using a grid system, along with incorporating a header, footer, navigation, images, and consistent typography and color schemes. UX principles guided the layout decisions, ensuring the site was clear, engaging, and easy to navigate. My favorite part of the project was transforming the road into the navigation bar. This creative choice visually reinforced the cycling theme while also serving a functional purpose. The road guided users through the site, making navigation feel intuitive and immersive. It helped connect the design concept to the user experience in a meaningful way. Overall, the assignment strengthened my ability to combine structure and creativity while designing for multiple screen sizes and maintaining a cohesive visual identity."
+    },
+    {
+      title: "Games & Puzzles Shelf Logo",
+      body: "I designed a logo for the University of St. Thomas Office of Sustainability's Games & Puzzles Shelf to establish a clear and recognizable identity for the program. The goal was to visually communicate both the playful nature of games and the initiative's focus on sustainability. I developed a bold, approachable mark featuring a puzzle piece as the central icon, which symbolizes connection, problem-solving, and reuse. The bright, contrasting color palette adds energy and reflects the fun, social aspect of the shelf while still aligning with sustainability themes. The typography is clean and modern, ensuring readability across different formats, from social media graphics to signage. I also incorporated a strong horizontal base element to ground the design and subtly suggest the idea of a shelf. The final logo is versatile and scalable, allowing it to function effectively as a standalone mark, watermark, or part of larger promotional materials, helping build long-term recognition for the initiative."
+    },
+    {
+      title: "Shower Invite",
+      body: "For my cousin's baby shower, I designed a custom invitation that combined a warm, seasonal aesthetic with clear and thoughtful communication. The concept, A little pumpkin is on the way, guided the overall design, incorporating soft autumn tones, illustrated pumpkins, and a playful yet refined typography style to reflect the celebratory and welcoming tone of the event. I focused on creating a balanced layout that felt both inviting and easy to read, using a central frame to organize key details like the date, time, and location. The striped background and scalloped border added visual interest while maintaining a cohesive and gentle design. I also carefully selected typography to distinguish between key information and decorative elements, ensuring clarity without overwhelming the viewer. This project allowed me to explore more personal, creative design while still applying strong communication principles, reinforcing my ability to tailor visuals to a specific audience and occasion."
+    }
+  ];
+
+  const modal = document.getElementById("designModal");
+  const title = document.getElementById("designTitle");
+  const body = document.getElementById("designBody");
+  const image = document.getElementById("designImage");
+  const count = document.getElementById("designCount");
+  let activeDesign = 0;
+
+  function renderDesign(index) {
+    activeDesign = (index + designStudies.length) % designStudies.length;
+    const item = designStudies[activeDesign];
+    const tile = document.querySelector(`.design-tile[data-design="${activeDesign}"]`);
+    const tileImage = tile?.querySelector("img");
+    title.textContent = item.title;
+    body.textContent = item.body;
+    image.src = tileImage?.getAttribute("src") || "";
+    image.alt = tileImage?.getAttribute("alt") || item.title;
+    count.textContent = `${activeDesign + 1} / ${designStudies.length}`;
+  }
+
+  function openDesign(index) {
+    renderDesign(index);
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeDesign() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  document.querySelectorAll(".design-tile").forEach((tile) => {
+    tile.addEventListener("click", () => openDesign(Number(tile.dataset.design)));
+  });
+
+  modal.querySelector(".case-close").addEventListener("click", closeDesign);
+  modal.querySelector(".case-overlay").addEventListener("click", closeDesign);
+  modal.querySelector(".case-prev").addEventListener("click", () => renderDesign(activeDesign - 1));
+  modal.querySelector(".case-next").addEventListener("click", () => renderDesign(activeDesign + 1));
+
+  document.addEventListener("keydown", (event) => {
+    if (!modal.classList.contains("is-open")) return;
+    if (event.key === "Escape") closeDesign();
+    if (event.key === "ArrowLeft") renderDesign(activeDesign - 1);
+    if (event.key === "ArrowRight") renderDesign(activeDesign + 1);
+  });
+</script>
+
+</body>
+</html>
