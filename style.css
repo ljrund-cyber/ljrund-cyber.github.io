@@ -538,7 +538,6 @@ main h3 {
   border: 0;
   border-radius: 18px;
   background: transparent;
-  box-shadow: 0 18px 34px rgba(160, 66, 83, 0.75);
   cursor: pointer;
   aspect-ratio: 16 / 9;
 }
@@ -650,6 +649,56 @@ main h3 {
   margin-bottom: 0;
   font-size: 0.98rem;
   line-height: 1.62;
+}
+
+.writing-layout {
+  padding-top: 6px;
+}
+
+.writing-intro {
+  margin-bottom: 34px;
+}
+
+.writing-grid {
+  gap: 50px;
+}
+
+.writing-tile button {
+  aspect-ratio: 4 / 3;
+  border-radius: 28px;
+}
+
+.writing-tile img {
+  object-fit: cover;
+  transform: none;
+}
+
+.writing-tile button:hover img,
+.writing-tile button:focus-visible img {
+  transform: scale(1.025);
+}
+
+.writing-tile span {
+  display: none;
+}
+
+.writing-title {
+  margin-top: 12px;
+  color: var(--text-dark);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.writing-modal-copy {
+  padding-top: 22px;
+}
+
+.writing-modal-copy section:first-child {
+  grid-column: auto;
 }
 
 .contact-layout {

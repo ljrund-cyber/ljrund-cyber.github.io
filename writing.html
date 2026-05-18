@@ -34,17 +34,51 @@
 </header>
 
 <!-- Main Content -->
-<main class="container">
-  <section class="about-story">
+<main class="container writing-layout">
+  <section class="about-story writing-intro">
     <h3>Writing</h3>
     <p>
-      A collection of writing work including startegic research, campaign copy,
+      A collection of writing work including strategic research, campaign copy,
       content strategy, and brand messaging created for online audiences.
     </p>
   </section>
 
-  <section class="intro-image">
-    <img src="images/Neutral and Brown Collage Style Spring Memories Photo Collage-2.webp" alt="Writing work preview">
+  <section class="campaign-grid writing-grid" aria-label="Writing samples and case studies">
+    <article class="campaign-tile writing-tile">
+      <button type="button" data-writing="0" aria-label="Open Advertising Portfolio case study">
+        <img src="images/ad.webp" alt="Advertising Portfolio preview">
+        <span>Advertising Portfolio</span>
+      </button>
+      <p class="writing-title">Advertising Portfolio</p>
+      <a class="campaign-download" href="documents/writing/advertising-portfolio.pdf" download>Download</a>
+    </article>
+
+    <article class="campaign-tile writing-tile">
+      <button type="button" data-writing="1" aria-label="Open Public Relations Portfolio case study">
+        <img src="images/pr.webp" alt="Public Relations Portfolio preview">
+        <span>Public Relations Portfolio</span>
+      </button>
+      <p class="writing-title">Public Relations Portfolio</p>
+      <a class="campaign-download" href="documents/writing/public-relations-portfolio.pdf" download>Download</a>
+    </article>
+
+    <article class="campaign-tile writing-tile">
+      <button type="button" data-writing="2" aria-label="Open Research Paper case study">
+        <img src="images/rs.webp" alt="Research Paper preview">
+        <span>Research Paper</span>
+      </button>
+      <p class="writing-title">Research Paper</p>
+      <a class="campaign-download" href="documents/writing/swift-effect-nfl-audience-participation.pdf" download>Download</a>
+    </article>
+
+    <article class="campaign-tile writing-tile">
+      <button type="button" data-writing="3" aria-label="Open Marketing Case Study">
+        <img src="images/cs.webp" alt="Case Study preview">
+        <span>Case Study</span>
+      </button>
+      <p class="writing-title">Case Study</p>
+      <a class="campaign-download" href="documents/writing/flare-fragrance-marketing-strategy.pdf" download>Download</a>
+    </article>
   </section>
 </main>
 
@@ -65,6 +99,125 @@
     </div>
   </div>
 </footer>
+
+<div class="case-modal" id="writingModal" aria-hidden="true">
+  <div class="case-overlay" data-close="true"></div>
+  <article class="case-card" role="dialog" aria-modal="true" aria-labelledby="writingTitle">
+    <header class="case-header">
+      <button class="case-close" type="button" aria-label="Close case study">x</button>
+      <div>
+        <p class="case-kicker">Writing Sample</p>
+        <h2 id="writingTitle"></h2>
+      </div>
+    </header>
+
+    <div class="case-scroll">
+      <div class="case-copy campaign-modal-copy writing-modal-copy" id="writingBody"></div>
+    </div>
+
+    <footer class="case-actions campaign-modal-actions">
+      <button class="case-prev" type="button">Previous</button>
+      <a id="writingDownload" class="campaign-download" href="#" download>Download</a>
+      <button class="case-next" type="button">Next</button>
+    </footer>
+  </article>
+</div>
+
+<script>
+  const writingStudies = [
+    {
+      title: "GAUOLN: Charge Your Ambition",
+      image: "images/ad.webp",
+      alt: "Advertising Portfolio preview",
+      pdf: "documents/writing/advertising-portfolio.pdf",
+      body: [
+        ["Advertising Portfolio", "Charge Your Ambition was a fully integrated creative campaign developed for GAUOLN’s 5-in-1 Charging Station, positioning the product as both a functional tech solution and a symbol of empowerment."],
+        ["Strategy", "The campaign focused on modern, ambitious women navigating male-dominated spaces including gaming, leadership, tech, healthcare, and sports, while emphasizing GAUOLN’s ability to keep multiple devices powered without interruption."],
+        ["Execution", "Across radio, long-form and short-form ads, social media content, and video storyboards, the campaign used storytelling to move beyond product features and highlight real-life moments where reliable power enables confidence, focus, and momentum."],
+        ["Takeaway", "By pairing emotional narratives with humor, relatable scenarios, and visually dynamic content, Charge Your Ambition reinforced GAUOLN’s tagline: “Powering devices, empowering women.”"]
+      ]
+    },
+    {
+      title: "GAUOLN Pantone Launch & Media Strategy",
+      image: "images/pr.webp",
+      alt: "Public Relations Portfolio preview",
+      pdf: "documents/writing/public-relations-portfolio.pdf",
+      body: [
+        ["Public Relations Portfolio", "To support GAUOLN’s brand growth and thought leadership in tech, I developed an integrated public relations campaign surrounding the launch of its limited-edition 5-in-1 charging station in Pantone’s 2025 Color of the Year, Mocha Mousse."],
+        ["Media Strategy", "The press release positioned the product as both design-forward and functional, highlighting GAUOLN’s expansion from core colorways into trend-driven releases while reinforcing the brand’s female-founded identity."],
+        ["Advocacy", "The campaign extended beyond product news through a targeted journalist pitch to BBC Technology Editor Zoe Kleinman, connecting GAUOLN’s Charge Your Ambition campaign to ongoing conversations about declining DEI funding and women’s representation in tech."],
+        ["Takeaway", "Together, these efforts aligned product innovation with cultural relevance, media strategy, and advocacy."]
+      ]
+    },
+    {
+      title: "In Our Engagement Era",
+      image: "images/rs.webp",
+      alt: "Research Paper preview",
+      pdf: "documents/writing/swift-effect-nfl-audience-participation.pdf",
+      body: [
+        ["Research Paper", "This research study examined how Taylor Swift’s association with Travis Kelce and the Kansas City Chiefs reshaped social media engagement within the NFL, a traditionally male-dominated space."],
+        ["Method", "Using quantitative social media analytics interpreted through a feminist lens, the study analyzed Instagram likes and comments over a two-year period before and after Swift’s first public appearance at a Chiefs game in September 2023."],
+        ["Findings", "Findings revealed a statistically significant increase in engagement during the Swift Era, with likes rising by over 40% and comments nearly doubling. Posts featuring Travis Kelce experienced the strongest engagement gains."],
+        ["Takeaway", "This case highlights how female celebrity visibility can expand audiences, challenge gendered norms, and drive measurable cultural and commercial impact in male-dominated industries."]
+      ]
+    },
+    {
+      title: "Flare Fragrance: Savvy Brand Launch",
+      image: "images/cs.webp",
+      alt: "Case Study preview",
+      pdf: "documents/writing/flare-fragrance-marketing-strategy.pdf",
+      body: [
+        ["Case Study", "This strategic marketing case study examined how Flare Fragrances could achieve $7.5 million in incremental revenue through the launch of Savvy, a new fragrance targeting women aged 18-34."],
+        ["Positioning", "The recommendation positioned Savvy as an independent, lifestyle-driven brand rather than a Loveliest extension, allowing Flare to attract younger consumers without diluting the prestige and loyalty associated with its core fragrance portfolio."],
+        ["Strategy", "Drawing on focus group insights and market analysis, the strategy emphasized affordable prestige pricing, sleek minimalist packaging, and digital-first promotion centered on self-expression, versatility, and modern consumer lifestyles."],
+        ["Takeaway", "The case highlights how strategic segmentation, independent brand positioning, and emotionally driven marketing can help legacy fragrance companies drive growth while maintaining long-term brand equity."]
+      ]
+    }
+  ];
+
+  const modal = document.getElementById("writingModal");
+  const title = document.getElementById("writingTitle");
+  const download = document.getElementById("writingDownload");
+  const body = document.getElementById("writingBody");
+  let activeWriting = 0;
+
+  function renderWriting(index) {
+    activeWriting = (index + writingStudies.length) % writingStudies.length;
+    const item = writingStudies[activeWriting];
+    title.textContent = item.title;
+    download.href = item.pdf;
+    body.innerHTML = item.body.map(([heading, copy]) => `<section><h4>${heading}</h4><p>${copy}</p></section>`).join("");
+  }
+
+  function openWriting(index) {
+    renderWriting(index);
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeWriting() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  document.querySelectorAll("[data-writing]").forEach((tile) => {
+    tile.addEventListener("click", () => openWriting(Number(tile.dataset.writing)));
+  });
+
+  modal.querySelector(".case-close").addEventListener("click", closeWriting);
+  modal.querySelector(".case-overlay").addEventListener("click", closeWriting);
+  modal.querySelector(".case-prev").addEventListener("click", () => renderWriting(activeWriting - 1));
+  modal.querySelector(".case-next").addEventListener("click", () => renderWriting(activeWriting + 1));
+
+  document.addEventListener("keydown", (event) => {
+    if (!modal.classList.contains("is-open")) return;
+    if (event.key === "Escape") closeWriting();
+    if (event.key === "ArrowLeft") renderWriting(activeWriting - 1);
+    if (event.key === "ArrowRight") renderWriting(activeWriting + 1);
+  });
+</script>
 
 </body>
 </html>
