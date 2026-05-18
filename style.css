@@ -689,7 +689,9 @@ main h3 {
 }
 
 .writing-title {
-  margin-top: 12px;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 8px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -704,8 +706,9 @@ main h3 {
 }
 
 .writing-tile .campaign-download {
+  grid-column: 1 / -1;
   justify-self: center;
-  margin-top: 10px;
+  margin-top: 4px;
   white-space: nowrap;
 }
 
