@@ -528,7 +528,7 @@ main h3 {
   background: transparent;
 }
 
-.campaign-tile button {
+.campaign-tile > button {
   position: relative;
   width: 100%;
   display: flex;
@@ -558,7 +558,7 @@ main h3 {
   object-fit: cover;
 }
 
-.campaign-tile button::after {
+.campaign-tile > button::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -582,15 +582,15 @@ main h3 {
   transition: opacity 0.2s ease;
 }
 
-.campaign-tile button:hover img,
-.campaign-tile button:focus-visible img {
+.campaign-tile > button:hover img,
+.campaign-tile > button:focus-visible img {
   transform: scale(1.055);
 }
 
-.campaign-tile button:hover::after,
-.campaign-tile button:hover span,
-.campaign-tile button:focus-visible::after,
-.campaign-tile button:focus-visible span {
+.campaign-tile > button:hover::after,
+.campaign-tile > button:hover span,
+.campaign-tile > button:focus-visible::after,
+.campaign-tile > button:focus-visible span {
   opacity: 1;
 }
 
@@ -663,7 +663,13 @@ main h3 {
   gap: 50px;
 }
 
-.writing-tile button {
+.writing-tile {
+  display: grid;
+  justify-items: center;
+}
+
+.writing-tile > button:first-child {
+  grid-column: 1 / -1;
   aspect-ratio: 4 / 3;
   border-radius: 28px;
 }
@@ -684,6 +690,9 @@ main h3 {
 
 .writing-title {
   margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--text-dark);
   font-size: 1.75rem;
   font-weight: 600;
@@ -691,6 +700,13 @@ main h3 {
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+
+.writing-tile .campaign-download {
+  justify-self: center;
+  margin-top: 10px;
+  white-space: nowrap;
 }
 
 .writing-modal-copy {
@@ -1539,7 +1555,7 @@ main h3 {
     margin-bottom: 42px;
   }
 
-  .campaign-tile button {
+  .campaign-tile > button {
     border-radius: 18px;
   }
 
