@@ -6,7 +6,7 @@
 }
 
 :root {
-  --site-max: 1680px;
+  --site-max: min(1680px, 80vw);
   --page-bg: #cbb8b7;
   --panel-bg: #d8c7c5;
   --panel-border: rgba(255, 255, 255, 0.45);
@@ -96,6 +96,7 @@ body.modal-open {
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   font-size: 15px;
+  line-height: 1.8;
   letter-spacing: 0.03em;
   box-shadow: 0 6px 18px rgba(111, 6, 27, 0.18);
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -399,60 +400,81 @@ main h3 {
 }
 
 .design-page .header .inner {
-  max-width: var(--site-max);
+  width: min(80vw, 1680px);
+  max-width: none;
+}
+
+.design-page .container {
+  width: min(80vw, 1680px);
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .design-page .logo img {
-  width: 158px;
+  width: 138px;
 }
 
 .design-page .logo-name {
-  font-size: clamp(3.1rem, 5.6vw, 4.55rem);
+  font-size: clamp(2.5rem, 5.2vw, 3.9rem);
 }
 
 .design-page .logo-tagline {
-  font-size: clamp(1.7rem, 3.4vw, 2.2rem);
+  font-size: clamp(1.45rem, 3.2vw, 1.95rem);
 }
 
 .design-intro {
-  margin-bottom: 26px;
+  margin-bottom: 34px;
 }
 
 .design-gallery {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
+  gap: 28px;
+  align-items: stretch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 4px;
+  padding: 4px 0 22px;
   margin-bottom: 78px;
+  -webkit-overflow-scrolling: touch;
 }
 
-.design-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr) minmax(0, 1.22fr);
-  gap: 14px;
-  align-items: start;
+.design-gallery::-webkit-scrollbar {
+  height: 14px;
 }
 
-.design-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.design-gallery::-webkit-scrollbar-track {
+  background: rgba(216, 199, 197, 0.58);
+  border-radius: 999px;
+}
+
+.design-gallery::-webkit-scrollbar-thumb {
+  background: var(--berry);
+  border: 4px solid rgba(216, 199, 197, 0.78);
+  border-radius: 999px;
 }
 
 .design-tile {
   position: relative;
-  width: 100%;
-  display: block;
+  flex: 0 0 clamp(340px, 34vw, 620px);
+  height: min(72vh, 760px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   border: 0;
-  border-radius: 0;
-  background: transparent;
+  border-radius: 18px;
+  background: rgba(246, 239, 239, 0.78);
   cursor: pointer;
+  scroll-snap-align: start;
 }
 
 .design-tile img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: contain;
 }
 
 .design-tile::after {
@@ -486,50 +508,6 @@ main h3 {
   opacity: 1;
 }
 
-.design-tile.tile-banner {
-  background: rgba(216, 199, 197, 0.62);
-}
-
-.design-row-banner .tile-banner {
-  grid-column: span 2;
-}
-
-.design-row-top > .design-tile[data-design="2"] {
-  width: 108%;
-  margin-left: -8%;
-}
-
-.design-row-top > .tile-wide {
-  grid-column: 2 / span 2;
-}
-
-.design-row-lower .design-stack {
-  grid-column: 3;
-  margin-top: -14px;
-}
-
-.design-note {
-  min-height: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: rgba(216, 199, 197, 0.72);
-  padding: 22px;
-  text-align: left;
-}
-
-.design-note h4 {
-  margin-bottom: 8px;
-  color: var(--berry-dark);
-  font-size: 1.45rem;
-  line-height: 1.1;
-}
-
-.design-note p {
-  font-size: 0.95rem;
-  line-height: 1.55;
-}
-
 .campaign-layout {
   padding-top: 6px;
 }
@@ -554,10 +532,13 @@ main h3 {
   position: relative;
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   border: 0;
-  border-radius: 24px;
+  border-radius: 18px;
   background: transparent;
+  box-shadow: 0 18px 34px rgba(160, 66, 83, 0.75);
   cursor: pointer;
   aspect-ratio: 16 / 9;
 }
@@ -566,13 +547,16 @@ main h3 {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.035);
   transition: transform 0.24s ease;
 }
 
 .campaign-tile img.campaign-cover {
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .campaign-tile button::after {
@@ -601,7 +585,7 @@ main h3 {
 
 .campaign-tile button:hover img,
 .campaign-tile button:focus-visible img {
-  transform: scale(1.02);
+  transform: scale(1.055);
 }
 
 .campaign-tile button:hover::after,
@@ -780,41 +764,8 @@ main h3 {
 
 .insta-app {
   width: 100%;
-  min-height: 100vh;
-  margin: 0;
+  margin: 16px 0 0;
   background: #b79f9f;
-}
-
-.insta-topbar {
-  width: min(100%, 1080px);
-  min-height: 82px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin: 0 auto;
-  padding: 28px 48px 10px;
-}
-
-.insta-nav {
-  display: flex;
-  gap: 24px;
-}
-
-.insta-nav a {
-  min-width: 88px;
-  padding: 7px 18px;
-  border-radius: 6px;
-  background: var(--berry-dark);
-  color: #ffffff;
-  font-size: 0.86rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-}
-
-.insta-nav a:hover {
-  background: #9d3248;
 }
 
 .insta-profile {
@@ -1011,6 +962,7 @@ main h3 {
   grid-template-columns: 48px 1fr;
   gap: 14px;
   align-items: center;
+  text-align: left;
   padding: 14px 22px;
   background: #a04253;
   border-bottom: 1px solid rgba(111, 6, 27, 0.18);
@@ -1031,6 +983,7 @@ main h3 {
 
 .case-kicker {
   margin-bottom: 2px;
+  text-align: left;
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.72rem;
   font-weight: 800;
@@ -1041,6 +994,7 @@ main h3 {
 
 .case-header h2 {
   margin: 0;
+  text-align: left;
   color: #ffffff;
   font-size: 1.35rem;
   line-height: 1.1;
@@ -1197,6 +1151,10 @@ main h3 {
 
 /* Responsive Design */
 @media (max-width: 900px) {
+  :root {
+    --site-max: calc(100% - 32px);
+  }
+
   .top-bar {
     flex-direction: column;
     align-items: center;
@@ -1287,31 +1245,7 @@ main h3 {
   }
 
   .design-gallery {
-    gap: 16px;
-  }
-
-  .design-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .design-stack {
-    gap: 16px;
-  }
-
-  .design-row-banner .tile-banner,
-  .design-row-top > .tile-wide,
-  .design-row-lower .design-stack {
-    grid-column: span 1;
-  }
-
-  .design-row-top > .design-tile[data-design="2"] {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .design-row-lower .design-stack {
-    margin-top: 0;
+    gap: 18px;
   }
 
   .campaign-grid {
@@ -1532,51 +1466,15 @@ main h3 {
   }
 
   .design-gallery {
-    gap: 18px;
     margin-bottom: 42px;
-  }
-
-  .design-row {
-    grid-template-columns: 1fr;
     gap: 18px;
-  }
-
-  .design-row-top > .design-tile[data-design="2"],
-  .design-row-top > .tile-wide,
-  .design-row-lower .design-stack {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 0;
-    grid-column: auto;
-  }
-
-  .design-stack {
-    gap: 18px;
-  }
-
-  .design-tile,
-  .design-tile.tile-wide,
-  .design-tile.tile-banner,
-  .design-tile.tile-tall,
-  .design-tile.tile-logo {
-    border-radius: 18px;
   }
 
   .design-tile {
-    display: block;
+    flex-basis: 84vw;
+    height: min(68vh, 620px);
     min-height: 0;
     padding: 0;
-  }
-
-  .design-tile img,
-  .design-tile[data-design="6"] img,
-  .design-tile.tile-logo img,
-  .design-tile.tile-banner img {
-    width: 100%;
-    height: auto;
-    object-fit: initial;
-    background: transparent;
-    border-radius: 0;
   }
 
   .design-tile span {
@@ -1605,23 +1503,6 @@ main h3 {
 
   .campaign-modal-copy {
     grid-template-columns: 1fr;
-  }
-
-  .insta-topbar {
-    min-height: 58px;
-    justify-content: flex-end;
-    padding: 18px 18px 8px;
-  }
-
-  .insta-nav {
-    display: flex;
-    gap: 8px;
-  }
-
-  .insta-nav a {
-    min-width: 68px;
-    padding: 6px 10px;
-    font-size: 0.72rem;
   }
 
   .insta-profile {
