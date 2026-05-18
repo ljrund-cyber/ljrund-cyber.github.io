@@ -5,8 +5,8 @@
   <title>Campaign | Alayna Rund</title>
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Alayna Rund campaign portfolio work, digital marketing, and content strategy">
-  <meta property="og:image" content="images/Black and White Classic Vintage Minimalist Newspaper Finance Report Presentation-4.webp">
+  <meta name="description" content="Alayna Rund campaign portfolio work, strategic communication, digital strategy, nonprofit communication, and content planning">
+  <meta property="og:image" content="images/campaigns/beauty-express-preview.png">
   <link rel="icon" href="images/favicon (1).ico" type="image/x-icon">
 </head>
 <body>
@@ -34,17 +34,43 @@
 </header>
 
 <!-- Main Content -->
-<main class="container">
-  <section class="about-story">
-    <h3>Campaign</h3>
-    <p>
-      A collection of campaign-focused work including strategy, visual direction,
-      messaging, and digital content designed to connect with audiences across platforms.
-    </p>
+<main class="container campaign-layout">
+  <section class="about-story campaign-intro">
+    <h3>Campaigns</h3>
   </section>
 
-  <section class="intro-image">
-    <img src="images/Black and White Classic Vintage Minimalist Newspaper Finance Report Presentation-4.webp" alt="Campaign work preview">
+  <section class="campaign-grid" aria-label="Campaign case studies">
+    <article class="campaign-tile">
+      <button type="button" data-campaign="0" aria-label="Open Bridging Brighter Futures campaign">
+        <img class="campaign-cover" src="images/campaigns/maxfield-preview.png" alt="Maxfield Elementary Bridging Brighter Futures campaign preview">
+        <span>Bridging Brighter Futures</span>
+      </button>
+      <a class="campaign-download" href="documents/campaigns/maxfield-brighter-futures-campaign.pdf" download>Download</a>
+    </article>
+
+    <article class="campaign-tile">
+      <button type="button" data-campaign="1" aria-label="Open Snap Fitness campaign">
+        <img src="images/campaigns/snap-fitness-preview.png" alt="Snap Fitness social media strategy preview">
+        <span>Snap Fitness</span>
+      </button>
+      <a class="campaign-download" href="documents/campaigns/snap-fitness-social-strategy.pdf" download>Download</a>
+    </article>
+
+    <article class="campaign-tile">
+      <button type="button" data-campaign="2" aria-label="Open Foundation for Essential Needs campaign">
+        <img src="images/campaigns/ffen-preview.png" alt="Foundation for Essential Needs campaign preview">
+        <span>Blueprints for Change</span>
+      </button>
+      <a class="campaign-download" href="documents/campaigns/ffen-blueprints-campaign.pdf" download>Download</a>
+    </article>
+
+    <article class="campaign-tile">
+      <button type="button" data-campaign="3" aria-label="Open Beauty Express campaign">
+        <img src="images/campaigns/beauty-express-preview.png" alt="Beauty Express campaign preview">
+        <span>Beauty Express</span>
+      </button>
+      <a class="campaign-download" href="documents/campaigns/beauty-express-campaign.pdf" download>Download</a>
+    </article>
   </section>
 </main>
 
@@ -65,6 +91,135 @@
     </div>
   </div>
 </footer>
+
+<div class="case-modal" id="campaignModal" aria-hidden="true">
+  <div class="case-overlay" data-close="true"></div>
+  <article class="case-card" role="dialog" aria-modal="true" aria-labelledby="campaignTitle">
+    <header class="case-header">
+      <button class="case-close" type="button" aria-label="Close case study">x</button>
+      <div>
+        <p class="case-kicker">Campaign</p>
+        <h2 id="campaignTitle"></h2>
+      </div>
+    </header>
+
+    <div class="case-scroll">
+      <figure class="case-media campaign-modal-media">
+        <img id="campaignImage" src="" alt="">
+      </figure>
+      <div class="case-copy campaign-modal-copy" id="campaignBody"></div>
+    </div>
+
+    <footer class="case-actions campaign-modal-actions">
+      <button class="case-prev" type="button">Previous</button>
+      <a id="campaignDownload" class="campaign-download" href="#" download>Download</a>
+      <button class="case-next" type="button">Next</button>
+    </footer>
+  </article>
+</div>
+
+<script>
+  const campaignStudies = [
+    {
+      title: "Bridging Brighter Futures",
+      image: "images/campaigns/maxfield-preview.png",
+      alt: "Maxfield Elementary Bridging Brighter Futures campaign preview",
+      pdf: "documents/campaigns/maxfield-brighter-futures-campaign.pdf",
+      body: [
+        ["Overview", "As part of my Strategic Communication capstone course, my team partnered with Maxfield Elementary School to help recruit volunteers for their Enrichment Clusters program. The campaign focused on increasing awareness and participation among the Rondo community, University of St. Thomas students and faculty, parents, and local leaders."],
+        ["The Challenge", "Maxfield Elementary faced a shortage of enrichment leaders, limiting students’ access to hands-on educational opportunities that foster creativity, leadership, and cultural identity. Many community members wanted to help but lacked confidence, information, or awareness about how to get involved."],
+        ["Strategy & Big Idea", "Our campaign centered around the theme “Bridging Brighter Futures,” inspired both by the construction of I-94 and the broader effort to reconnect the historically divided Rondo community. The messaging emphasized community connection, identity and belonging, intergenerational mentorship, and building opportunities for future generations."],
+        ["Execution", "We developed print advertisements, posters and billboards, trifold brochures, postcards mailed throughout the Rondo community, social media campaigns, Facebook group outreach, menu advertisements in local restaurants, and QR-based sign-up materials."],
+        ["Results & Takeaways", "This project was especially meaningful because it combined strategic communication with community impact. It strengthened my skills in nonprofit communications, campaign planning, audience segmentation, and culturally informed storytelling."]
+      ]
+    },
+    {
+      title: "Snap Fitness",
+      image: "images/campaigns/snap-fitness-preview.png",
+      alt: "Snap Fitness social media strategy preview",
+      pdf: "documents/campaigns/snap-fitness-social-strategy.pdf",
+      body: [
+        ["Overview", "In my Digital Content and Strategy course, our team partnered with Snap Fitness to develop a comprehensive social media strategy focused on increasing engagement and driving memberships. The project included a full social media audit, competitor analysis, audience research, and recommendations for improving content performance across platforms."],
+        ["The Challenge", "While Snap Fitness had a strong presence across social media platforms, engagement remained low due to overly promotional content and inconsistent interaction with audiences. The brand was functioning more as a content publisher than a community-driven fitness brand."],
+        ["Strategy & Insights", "Through our audit and competitive analysis, we discovered that short-form video, authentic storytelling, and community-centered content consistently outperformed static promotional posts. Our strategy focused on video-first storytelling, human-centered content, increased audience interaction, and community-driven engagement."],
+        ["Execution", "Our recommendations included increasing short-form video content across TikTok and Instagram, creating relatable member and trainer spotlights, developing platform-specific content strategies, encouraging conversation-driven engagement, and reducing overly polished branded graphics."],
+        ["Results & Takeaways", "This project strengthened my experience in digital strategy, social media analytics, content planning, social media audits, audience behavior analysis, and platform-specific recommendations."]
+      ]
+    },
+    {
+      title: "Blueprints for Change",
+      image: "images/campaigns/ffen-preview.png",
+      alt: "Foundation for Essential Needs campaign preview",
+      pdf: "documents/campaigns/ffen-blueprints-campaign.pdf",
+      body: [
+        ["Overview", "In my Writing for Strategic Communication course, our team partnered with Foundation for Essential Needs, a nonprofit consultancy that helps food shelves operate more efficiently and sustainably. Our campaign focused on increasing brand awareness, clarifying FFEN’s value proposition, and improving engagement with donors, volunteers, and food shelf partners."],
+        ["The Challenge", "Many audiences misunderstood the organization’s role, often viewing FFEN as simply a food distributor rather than a consulting organization focused on improving food shelf systems and operations. Their messaging also relied heavily on technical language and statistics, making it harder to emotionally connect with audiences."],
+        ["Strategy & Big Idea", "Our team developed the campaign theme “Creating Blueprints for Change,” positioning FFEN as the behind-the-scenes architect helping food shelves reach their full potential. The strategy focused on simplifying messaging, emphasizing transformational storytelling, increasing donor engagement, and showcasing measurable community impact."],
+        ["Execution", "Our integrated campaign included print advertisements, Facebook and LinkedIn social campaigns, email marketing, press releases, website concepts, radio and television advertising, opinion editorials, and newsletters. Blueprint-inspired visuals reinforced FFEN’s role in building stronger food systems."],
+        ["Results & Takeaways", "This project gave me valuable experience working with a real nonprofit client and creating messaging tailored to multiple stakeholder groups. It strengthened my skills in campaign writing, strategic storytelling, audience analysis, and integrated communications planning."]
+      ]
+    },
+    {
+      title: "Beauty Express",
+      image: "images/campaigns/beauty-express-preview.png",
+      alt: "Beauty Express campaign preview",
+      pdf: "documents/campaigns/beauty-express-campaign.pdf",
+      body: [
+        ["Overview", "Beauty Express was a semester-long project developed for my Principles of Strategic Communication course. My team created a fictional mobile beauty company that combined convenience, beauty services, and retail products into one cohesive brand experience."],
+        ["The Challenge", "The goal was to create a unique business concept and build a communication strategy that clearly differentiated the brand in a competitive beauty industry. Our challenge was to identify a gap in the market while developing messaging for younger audiences seeking convenience and accessibility."],
+        ["Strategy & Big Idea", "Our team developed Beauty Express, a mobile beauty service and boutique designed to bring professional beauty experiences directly to customers. The campaign slogan, “Bringing beauty to you,” reflected our focus on personalized, on-the-go beauty experiences."],
+        ["Execution", "To support awareness and engagement, we developed promotional partnerships and cause marketing initiatives, including donation-based beauty events and a “Women of Country” event concept. The campaign also included brand identity development, social media advertising concepts, event planning, audience segmentation, and service positioning."],
+        ["Results & Takeaways", "This project strengthened my understanding of strategic messaging, audience targeting, and integrated marketing communications. It also gave me hands-on experience building a brand identity from concept to execution."]
+      ]
+    }
+  ];
+
+  const modal = document.getElementById("campaignModal");
+  const title = document.getElementById("campaignTitle");
+  const image = document.getElementById("campaignImage");
+  const download = document.getElementById("campaignDownload");
+  const body = document.getElementById("campaignBody");
+  let activeCampaign = 0;
+
+  function renderCampaign(index) {
+    activeCampaign = (index + campaignStudies.length) % campaignStudies.length;
+    const item = campaignStudies[activeCampaign];
+    title.textContent = item.title;
+    image.src = item.image;
+    image.alt = item.alt;
+    download.href = item.pdf;
+    body.innerHTML = item.body.map(([heading, copy]) => `<section><h4>${heading}</h4><p>${copy}</p></section>`).join("");
+  }
+
+  function openCampaign(index) {
+    renderCampaign(index);
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeCampaign() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  document.querySelectorAll("[data-campaign]").forEach((tile) => {
+    tile.addEventListener("click", () => openCampaign(Number(tile.dataset.campaign)));
+  });
+
+  modal.querySelector(".case-close").addEventListener("click", closeCampaign);
+  modal.querySelector(".case-overlay").addEventListener("click", closeCampaign);
+  modal.querySelector(".case-prev").addEventListener("click", () => renderCampaign(activeCampaign - 1));
+  modal.querySelector(".case-next").addEventListener("click", () => renderCampaign(activeCampaign + 1));
+
+  document.addEventListener("keydown", (event) => {
+    if (!modal.classList.contains("is-open")) return;
+    if (event.key === "Escape") closeCampaign();
+    if (event.key === "ArrowLeft") renderCampaign(activeCampaign - 1);
+    if (event.key === "ArrowRight") renderCampaign(activeCampaign + 1);
+  });
+</script>
 
 </body>
 </html>
