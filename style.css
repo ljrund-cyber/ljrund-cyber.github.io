@@ -528,7 +528,7 @@ main h3 {
   background: transparent;
 }
 
-.campaign-tile > button {
+.campaign-tile > button:not(.writing-title) {
   position: relative;
   width: 100%;
   display: flex;
@@ -558,7 +558,7 @@ main h3 {
   object-fit: cover;
 }
 
-.campaign-tile > button::after {
+.campaign-tile > button:not(.writing-title)::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -582,15 +582,15 @@ main h3 {
   transition: opacity 0.2s ease;
 }
 
-.campaign-tile > button:hover img,
-.campaign-tile > button:focus-visible img {
+.campaign-tile > button:not(.writing-title):hover img,
+.campaign-tile > button:not(.writing-title):focus-visible img {
   transform: scale(1.055);
 }
 
-.campaign-tile > button:hover::after,
-.campaign-tile > button:hover span,
-.campaign-tile > button:focus-visible::after,
-.campaign-tile > button:focus-visible span {
+.campaign-tile > button:not(.writing-title):hover::after,
+.campaign-tile > button:not(.writing-title):hover span,
+.campaign-tile > button:not(.writing-title):focus-visible::after,
+.campaign-tile > button:not(.writing-title):focus-visible span {
   opacity: 1;
 }
 
@@ -660,12 +660,13 @@ main h3 {
 }
 
 .writing-grid {
-  gap: 50px;
+  gap: 28px 34px;
 }
 
 .writing-tile {
   display: grid;
   justify-items: center;
+  row-gap: 10px;
 }
 
 .writing-tile > button:first-child {
@@ -691,6 +692,9 @@ main h3 {
 .writing-title {
   grid-column: 1 / -1;
   justify-self: center;
+  width: auto;
+  min-height: 0;
+  display: inline-block;
   margin-top: 8px;
   padding: 0;
   border: 0;
@@ -698,7 +702,7 @@ main h3 {
   color: var(--text-dark);
   font-size: 1.75rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.05;
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 0.18em;
@@ -708,7 +712,7 @@ main h3 {
 .writing-tile .campaign-download {
   grid-column: 1 / -1;
   justify-self: center;
-  margin-top: 4px;
+  margin-top: 2px;
   white-space: nowrap;
 }
 
@@ -1558,7 +1562,7 @@ main h3 {
     margin-bottom: 42px;
   }
 
-  .campaign-tile > button {
+  .campaign-tile > button:not(.writing-title) {
     border-radius: 18px;
   }
 
